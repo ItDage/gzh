@@ -20,11 +20,10 @@ import java.util.HashMap;
  * @Version 1.0
  **/
 @Controller
-@RequestMapping("/token")
 public class GetToken {
 
     @ResponseBody
-    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @RequestMapping(value = "/token", method = RequestMethod.GET)
     public Result getToken(){
         System.out.println("获取token");
         RestTemplate restTemplate = new RestTemplate();
