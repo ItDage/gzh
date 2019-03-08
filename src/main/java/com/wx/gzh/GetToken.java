@@ -26,6 +26,7 @@ public class GetToken {
     @ResponseBody
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     public Result getToken(){
+        System.out.println("获取token");
         RestTemplate restTemplate = new RestTemplate();
         Result result = restTemplate.getForObject("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc0e061b944392bd3&secret=8626ceca947145bd478b9d1a76c7f175", Result.class);
         System.out.println(result);
