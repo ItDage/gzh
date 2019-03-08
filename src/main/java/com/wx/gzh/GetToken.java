@@ -21,8 +21,9 @@ import java.util.HashMap;
  **/
 @Controller
 public class GetToken {
-    
-    @RequestMapping(value = "/token", method = RequestMethod.GET)
+
+    @ResponseBody
+    @RequestMapping(value = "token", method = RequestMethod.GET)
     public Result getToken(){
         System.out.println("获取token");
         RestTemplate restTemplate = new RestTemplate();
